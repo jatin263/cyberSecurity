@@ -1,5 +1,3 @@
-import random
-
 def gcdd(n,m):
     if n>m:
         maxx=m
