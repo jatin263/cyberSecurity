@@ -1,3 +1,8 @@
+def makePath(s,p,cost):
+    print(chr(s)+" -> "+chr(p)+" = ",cost)
+    return 0
+    
+
 n=int(input("Enter the number of the Nodes \n --- \t"))
 aas=65
 nord=[]
@@ -24,4 +29,14 @@ for j in nord:
 
 print("\n\t\t -- Steps To finding Data -- \n\n")
 
+aas=65
+for i in nord:
+    aass=65
+    for j in i:
+        if j!=0 and j!='inf':
+            makePath(aas,aass,j)
+        aass=aass+1
+    aas=aas+1
+            
+        
 
