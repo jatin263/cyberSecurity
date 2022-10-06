@@ -50,7 +50,7 @@ for j in range(1,10):
         d=int(d)  
         break
 print("public key ("+str(e)+","+str(n)+")")
-print("public key ("+str(d)+","+str(n)+")")
+print("private key ("+str(d)+","+str(n)+")")
 for i in m:
   cyherText = cyherText+chr((ord(i)**e)%n)
 print("cyher text ",cyherText)
