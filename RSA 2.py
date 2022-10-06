@@ -51,11 +51,17 @@ for j in range(1,10):
         break
 print("public key ("+str(e)+","+str(n)+")")
 print("private key ("+str(d)+","+str(n)+")")
+cyherText=cyherText+chr(d)
 for i in m:
   cyherText = cyherText+chr((ord(i)**e)%n)
+cyherText=cyherText+chr(n)
 print("cyher text ",cyherText)
 original=''
-for i in cyherText:
+d=ord(cyherText[0])
+n=ord(cyherText[-1])
+print("private key ("+str(d)+","+str(n)+")")
+c=cyherText[1:-1]
+for i in c:
   original=original+chr((ord(i)**d)%n)
 print("original text ",original)
 
